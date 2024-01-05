@@ -1,0 +1,76 @@
+// App.jsx
+import React, { useState } from 'react';
+import { Button, Modal, Row, Card, Flex, Layout } from 'antd';
+import './ColComponent';
+import './App.css';
+import ColComponent from './ColComponent';
+
+const { Sider, Layout, Content } = Layout;
+
+const layoutStyle = {
+  borderRadius: 8,
+  margin: '20px',
+  background: 'white',
+};
+
+const App = () => {
+  const [open, setOpen] = useState(false);
+  const [selectedKeys, setSelectedKeys] = useState([]);
+
+  const handleCardClick = (key) => {
+    const index = selectedKeys.indexOf(key);
+    if (index === -1) {
+      // Key not found in the array, add it
+      setSelectedKeys([...selectedKeys, key]);
+    } else {
+      // Key found in the array, remove it
+      const updatedKeys = [...selectedKeys];
+      updatedKeys.splice(index, 1);
+      setSelectedKeys(updatedKeys);
+    }
+  };
+
+  return (
+    <div className='parent'>
+      <Button type="primary" onClick={() => setOpen(true)}>
+        Open Modal
+      </Button>
+      <Modal
+        centered
+        open={open}
+        onOk={() => setOpen(false)}
+        onCancel={() => setOpen(false)}
+        width={2000}
+      >
+        <Flex wrap='wrap'>
+          <Layout style={layoutStyle}>
+            <Sider width="15%">
+              <div>
+                Selected Keys:
+                {selectedKeys.map((key) => (
+                  <div key={key}>{key}</div>
+                ))}
+              </div>
+            </Sider>
+            <Layout>
+              <Content>
+                <Row gutter={[16, 24]}>
+                  {cards.map((card) => (
+                    <ColComponent
+                      key={card.key}
+                      imageUrl={card.imageUrl}
+                      cardKey={card.key}
+                      onClick={() => handleCardClick(card.key)}
+                    />
+                  ))}
+                </Row>
+              </Content>
+            </Layout>
+          </Layout>
+        </Flex>
+      </Modal>
+    </div>
+  );
+};
+
+export default App;

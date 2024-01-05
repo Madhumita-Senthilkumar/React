@@ -1,0 +1,60 @@
+.parent
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.card_footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_left {
+  display: flex;
+  align-items: center;
+}
+
+.footer_right {
+  display: flex;
+  align-items: center; }
+
+.css-dev-only-do-not-override-17sses9.ant-card .ant-card-body{
+  padding: 10px;
+  border-radius: 8px 8px 0px 0px;
+}
+.card .ant-card-actions
+{
+  background-color: rgb(255, 253, 253);
+
+}
+.ant-card-body
+{
+  background-color: rgb(255, 253, 253);
+}
+.gutter-row{
+  display: flex;
+  justify-content: space-around;
+}
+.img
+{
+  padding-bottom: 10px;
+}
+.card .badge-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  
+}
+.checkbox
+{
+  position: absolute;
+  top:0;
+  left: 0;
+  z-index: 1;
+}
+.ant-layout-sider-children
+{
+  background-color: white;
+}
