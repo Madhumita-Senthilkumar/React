@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.parent 
+{
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
+}
+.modal .ant-modal-body
+{
+  height: calc(105vh - 200px);
+  overflow: auto;
+}
+::placeholder
+{
+  color: black;
+}
+.header 
+{
+  display: flex;
+  align-items: baseline;
+}
+.ant-typography 
+{
+  margin-top: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.date-picker 
+{
+  background-color: aliceblue;
+  border-color: transparent;
+  width: 250px;
+}
+.down-arrow 
+{
+  font-size: smaller;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content-one, .content-two 
+{
+  width: 100%;
+  display: flex;
+  padding-right: 20px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.content-three ,.content-four ,.content-five ,.content-six ,.content-seven
+{
+  width: 100%;
+  display: flex;
+  padding-right: 20px;
+  padding-top: 10px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.text-button 
+{
+  padding: 0px 0px;
+  color: blue;
+  background-color: transparent;
+}
+.text-button:hover 
+{
+  background-color: transparent !important;
+}
+.ant-space-gap-col-small ,.ant-space
+{
+  row-gap: 0px;
+}
+.text-button :hover 
+{
+  background-color: transparent;
+}
+.select-opt .ant-select-selector,
+.select-opt-two .ant-select-selector,
+.select-opt-three .ant-select-selector,
+.select-opt-four .ant-select-selector,
+.select-opt-five .ant-select-selector,
+.select-opt-six .ant-select-selector{
+  background-color: aliceblue!important;
+  border-color: transparent !important;
+  padding: 0 2px;
+}
+.creator-picker .ant-select-selector
+{
+  border-color: transparent !important;
+}
+.creator-picker .ant-select-selector
+{
+  background-color: aliceblue !important;
+}
+.id-picker .ant-select-selector ,.title-picker .ant-select-selector
+{
+  background-color: aliceblue !important;
+  border-color: transparent !important;
+}
+.add-condition-button 
+{
+  margin: 10px 0px;
+}
+#btn-conditions
+{
+  background-color: transparent;
+  padding: 3px 20px;
+  border-color: blue;
+  color: blue;
 }
